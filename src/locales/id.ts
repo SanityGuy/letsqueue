@@ -26,6 +26,7 @@ const id = {
             distance: "dari lokasi",
             quantity: "yang tersedia",
             free: "Gratis",
+            purchase: "Pesan Sekarang",
         },
 
         howItWorks: {

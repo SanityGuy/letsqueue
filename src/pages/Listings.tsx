@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import Navbar from '../components/listings/Navbar'
 
 type Listing = {
     name: string;
@@ -35,6 +36,8 @@ export default function Listings() {
     }, [sortBy]);
 
     return (
+        <>
+        <Navbar />
         <main className="min-h-screen bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text">
             <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-14">
                 <section className="relative overflow-hidden rounded-3xl bg-brand-primary px-7 py-10 text-white shadow-xl sm:px-12 sm:py-14">
@@ -99,5 +102,6 @@ export default function Listings() {
                 </section>
             </div>
         </main>
+        </>
     );
 }   

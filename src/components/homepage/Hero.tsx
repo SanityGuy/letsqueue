@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { Search, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -24,10 +23,10 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link to='/listings' className="rounded-xl bg-brand-primary px-6 py-3 font-semibold text-white transition hover:bg-brand-primary/90">
+            <a href='#find-food' className="rounded-xl bg-brand-primary px-6 py-3 font-semibold text-white transition hover:bg-brand-primary/90">
               <Search size={24} className="mr-2 shrink-0 inline" />
               {t("hero.findFood")}
-            </Link>
+            </a>
 
             <button className="rounded-xl border border-light-border bg-light-surface px-6 py-3 font-semibold text-light-text transition hover:bg-light-bg hover:border-brand-primary">
               <MapPin size={24} className="mr-2 shrink-0 inline" />

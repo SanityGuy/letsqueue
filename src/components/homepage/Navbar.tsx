@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ForkKnifeCrossed } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { US, ID } from 'country-flag-icons/react/3x2'
+import { Link } from 'react-router-dom'
 
-import icon from '/letsqueue.png'
+import icon from '/letsqueue_icon.png'
+import logo from '/letsqueue_logo.png'
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -18,9 +20,10 @@ export default function Navbar() {
         <nav className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
             <a
             href="#"
-            className="text-xl font-extrabold tracking-tight text-brand-primary sm:text-2xl"
+            className="font-extrabold tracking-tight text-brand-primary flex flex-row items-center"
             >
-            <img src={icon} alt="LetsQueue!" className="h-32 p-4 w-auto inline-flex mr-1" />
+            <img src={icon} alt="LetsQueue!" className="h-16 p-2 w-auto" />
+            <img src={logo} alt="LetsQueue!" className="w-auto h-10 p-2" />
             </a>
 
             <div className="hidden items-center gap-8 md:flex">
@@ -47,12 +50,14 @@ export default function Navbar() {
                 {i18n.language === 'id' ? 'ID' : 'EN'}
             </button>
 
-            <a
-                href="#find-food"
-                className="rounded-xl bg-brand-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-primary/90"
-            >
+            <Link
+                to="/listings"
+                onClick={() => setIsOpen(false)}
+                className="mt-2 rounded-xl text-sm bg-brand-primary px-4 py-2 text-center font-semibold text-white"
+                >
                 {t('nav.findFood')}
-            </a>
+                <ForkKnifeCrossed size={20} className="ml-1 shrink-0 inline-flex text-white" />
+            </Link>
             </div>
 
             <button
@@ -93,13 +98,15 @@ export default function Navbar() {
                 {i18n.language === 'en' ? 'Bahasa Indonesia' : 'English'}
                 </button>
 
-                <a
-                href="#find-food"
+                <Link
+                to="/listings"
                 onClick={() => setIsOpen(false)}
-                className="mt-2 rounded-xl bg-brand-primary px-4 py-3 text-center font-semibold text-white"
+                className="mt-2 rounded-xl text-sm bg-brand-primary px-4 py-2 text-center font-semibold text-white"
                 >
                 {t('nav.findFood')}
-                </a>
+                <ForkKnifeCrossed size={20} className="ml-1 shrink-0 inline-flex text-white" />
+                </Link>
+
             </div>
             </div>
         )}

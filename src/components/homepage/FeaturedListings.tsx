@@ -1,5 +1,6 @@
-import { Clock, MapPin, Tag } from 'lucide-react'
+import { Clock, MapPin, Tag, ArrowRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const listings = [
     {
@@ -9,8 +10,8 @@ const listings = [
         restaurant: 'Example Restaurant',
         location: '0.8 km',
         quantity: '5',
-        price: 'Rp15.000',
-        originalPrice: 'Rp30.000',
+        price: 'Rp 15.000',
+        originalPrice: 'Rp 30.000',
     },
     {
         id: 2,
@@ -19,8 +20,8 @@ const listings = [
         restaurant: 'Morning Bakery',
         location: '1.2 km',
         quantity: '8',
-        price: 'Rp10.000',
-        originalPrice: 'Rp25.000',
+        price: 'Rp 10.000',
+        originalPrice: 'Rp 25.000',
     },
     {
         id: 3,
@@ -58,9 +59,9 @@ export default function FeaturedListings() {
                         </p>
                     </div>
 
-                    <button className="self-start rounded-xl border border-light-border px-4 py-2.5 font-semibold text-light-text transition hover:border-brand-primary hover:text-brand-primary sm:self-auto">
+                    <Link to="/listings" className="self-start rounded-xl border border-light-border px-4 py-2.5 font-semibold text-light-text transition hover:border-brand-primary hover:text-brand-primary sm:self-auto">
                         {t('listings.viewAll')}
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -86,9 +87,11 @@ export default function FeaturedListings() {
                                         </p>
                                     </div>
 
-                                    <span className="shrink-0 rounded-lg bg-brand-primary/10 px-2.5 py-1 text-xs font-bold text-brand-primary">
-                                        {listing.price}
-                                    </span>
+                                    <button className="group shrink-0 rounded-lg bg-brand-primary/10 px-2.5 py-1 text-[13px] font-bold text-brand-primary transition hover:bg-brand-primary hover:text-white">
+                                    {t('listings.purchase')}
+                                    <ArrowRight size={16} className="ml-[0.15rem] shrink-0 inline-flex group-hover:translate-x-[0.15rem] transition duration-300 transform" />
+                                    </button>
+
                                 </div>
 
                                 <div className="mt-5 space-y-2 text-sm text-light-muted">

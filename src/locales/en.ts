@@ -26,6 +26,7 @@ const en = {
             distance: "from location",
             quantity: "is available",
             free: "Free",
+            purchase: "Order Now",
         },
 
         howItWorks: {
