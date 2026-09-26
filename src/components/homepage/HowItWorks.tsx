@@ -23,7 +23,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-16 sm:py-20 lg:py-28">
+    <section id="how-it-works" className="scroll-mt-16 py-16 sm:py-20 lg:py-28">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-semibold text-brand-primary">

@@ -7,7 +7,7 @@ export default function ForRestaurants() {
     return (
         <section
             id="restaurants"
-            className="bg-light-bg py-16 sm:py-20 lg:py-28"
+            className="bg-light-bg scroll-mt-16 py-16 sm:py-20 lg:py-28"
         >
             <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-2 md:items-center lg:gap-16 lg:px-8">
                 <div>

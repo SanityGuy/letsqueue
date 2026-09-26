@@ -18,7 +18,7 @@ export default function CTA() {
 
                     <button className="mt-7 inline-flex items-center gap-2 rounded-xl bg-brand-primary px-6 py-3.5 font-semibold text-white transition hover:bg-brand-primary/90">
                         {t('cta.button')}
-                        <ArrowRight size={18} />
+                        <ArrowRight size={20} />
                     </button>
                 </div>
             </div>

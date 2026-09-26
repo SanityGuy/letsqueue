@@ -7,17 +7,17 @@ export default function Impact() {
     const stats = [
         {
             icon: Utensils,
-            value: '—',
+            value: '298',
             label: t('impact.food'),
         },
         {
             icon: Users,
-            value: '—',
+            value: '14',
             label: t('impact.people'),
         },
         {
             icon: Leaf,
-            value: '—',
+            value: '150',
             label: t('impact.waste'),
         },
     ]
@@ -45,7 +45,7 @@ export default function Impact() {
                                 <Icon size={24} />
 
                                 <p className="mt-5 text-3xl font-bold">
-                                    {value}
+                                    {value && value.toLocaleString() || '—'}
                                 </p>
 
                                 <p className="mt-1 text-sm text-white/80">
